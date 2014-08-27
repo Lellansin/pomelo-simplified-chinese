@@ -1,66 +1,68 @@
-## Pomelo -- a fast, scalable game server framework for node.js
+## Pomelo 游戏服务器框架
 
-Pomelo is a fast, scalable game server framework for [node.js](http://nodejs.org).
-It provides the basic development framework and many related components, including libraries and tools.
-Pomelo is also suitable for real-time web applications; its distributed architecture makes pomelo scale better than other real-time web frameworks.
+Pomelo 是一个快速的, 可伸缩的 [node.js](http://nodejs.org) 游戏服务器框架.
+它提供了基础的开发框架以及许多相关联的组件 (components) 、库 (libraries) 以及工具 (tools)。
+Pomelo 也适用于 实时的 web 应用; 它的分布式架构使其 拥有比其他实时 web 框架更好的拓展性。
 
 [![Build Status](https://travis-ci.org/NetEase/pomelo.svg?branch=master)](https://travis-ci.org/NetEase/pomelo)
 
- * Homepage: <http://pomelo.netease.com/>
- * Mailing list: <https://groups.google.com/group/pomelo>
- * Documentation: <http://github.com/NetEase/pomelo>
- * Wiki: <https://github.com/NetEase/pomelo/wiki/>
- * Issues: <https://github.com/NetEase/pomelo/issues/>
- * Tags: game, nodejs
+ * 英文主页: <http://pomelo.netease.com/>
+ * 中文社区: <http://nodejs.netease.com/>
+ * 邮件列博: <https://groups.google.com/group/pomelo>
+ * 文档: <http://github.com/NetEase/pomelo>
+ * 英文Wiki: <https://github.com/NetEase/pomelo/wiki/>
+ * 中文Wiki: <https://github.com/NetEase/pomelo/wiki/Home-in-Chinese>
+ * 问题: <https://github.com/NetEase/pomelo/issues/>
+ * 标签: game, nodejs
 
 
-## Features
+## 特性
 
-### Complete support of game server and realtime application server architecture
+### 游戏服务器和实时应用服务器架构的完整支持
 
-* Multiple-player game: mobile, social, web, MMO rpg(middle size)
-* Realtime application: chat,  message push, etc.
+* 多人游戏: mobile, social, web应用, MMO rpg(中等规模)
+* 实时应用: 聊天,  消息推送, 等等.
 
-### Fast, scalable
+### 快速, 可伸缩
 
-* Distributed (multi-process) architecture, can be easily scale up
-* Flexible server extension
-* Full performance optimization and test
+* 分布式 (多进程) 架构, 可以轻松的伸缩
+* 灵活的服务器扩展
+* 全性能优化与测试
 
-### Easy
+### 容易上手
 
-* Simple API: request, response, broadcast, etc.
-* Lightweight: high development efficiency based on node.js
-* Convention over configuration: almost zero config
+* 简单的 API: 请求(request), 响应(response), 广播(broadcast), 等等.
+* 轻量级: 享受Node.js的效率高开发
+* 约定优于配置原则: 几乎零配置
 
-### Powerful
+### 强大的支持
 
-* Many clients support, including javascript, flash, android, iOS, cocos2d-x, C
-* Many libraries and tools, including command line tool, admin tool, performance test tool, AI, path finding etc.
-* Good reference materials: full docs, many examples and [an open-source MMO RPG demo](https://github.com/NetEase/pomelo/wiki/Introduction-to--Lord-of-Pomelo)
+* 客户端支持，包括 javascript、flash、android、iOS、cocos2d-x、C
+* 库和工具，包括命令行工具、管理员工具、性能测试工具、AI、路劲查找等等.
+* 详细的参考资料: 完整的文档, 大量的例子以及[一个开源的 MMORPG 演示](https://github.com/NetEase/pomelo/wiki/Introduction-to--Lord-of-Pomelo)
 
-### Extensible
+### 可扩展的
 
-* Support plugin architecture, easy to add new features through plugins. We also provide many plugins like online status, master high availability.
-* Custom features, users can define their own network protocol, custom components very easy.
+* 支持插件系统, 开源简单的通过插件添加新的功能. 我们同样提供许多插件如：在线状态, master high availability.
+* 自定义功能, 开发人员可以很容易的定义自己的网络协议, 以及自定义组件.
 
-## Why should I use pomelo?
-Fast, scalable, real-time game server development is not an easy job, and a good container or framework can reduce its complexity.
-Unfortunately, unlike web, finding a game server framework solution is difficult, especially an open source solution. Pomelo fills this gap, providing a full solution for building game server frameworks.
-Pomelo has the following advantages:
-* The architecture is scalable. It uses a multi-process, single thread runtime architecture, which has been proven in the industry and is especially suited to the node.js thread model.
-* Easy to use, the development model is quite similar to web, using convention over configuration, with almost zero config. The [API](http://pomelo.netease.com/api.html) is also easy to use.
-* The framework is extensible. Based on the node.js micro module principle, the core of pomelo is small. All of the components, libraries and tools are individual npm modules, and anyone can create their own module to extend the framework.
-* The reference materials and documentation are quite complete. In addition to the documentation, we also provide [an open-source MMO RPG demo](https://github.com/NetEase/pomelo/wiki/Introduction-to--Lord-of-Pomelo) (HTML5 client), which is a far better reference material than any book.
+## 为什么我要使用 pomelo?
+一个快速的、可伸缩的、实时的游戏服务器开发，不是一个简单的工作，一个好的容器或者框架可以降低其复杂性。
+不幸的是, 与web开发不同, 想要找到一个游戏服务器框架的解决方案是很难的, 特别是开源的解决方案. Pomelo 填补这一空白, 提供了一个用于创建游戏服务器框架的完整解决方案。
+Pomelo 有如下几点优势:
+* 架构是可伸缩的。 It uses a multi-process, single thread runtime architecture, which has been proven in the industry and is especially suited to the node.js thread model.
+* 容易使用, the development model is quite similar to web, using convention over configuration, with almost zero config. The [API](http://pomelo.netease.com/api.html) is also easy to use.
+* 框架可拓展. Based on the node.js micro module principle, the core of pomelo is small. All of the components, libraries and tools are individual npm modules, and anyone can create their own module to extend the framework.
+* 拥有完整的开发资料和文档. In addition to the documentation, we also provide [an open-source MMO RPG demo](https://github.com/NetEase/pomelo/wiki/Introduction-to--Lord-of-Pomelo) (HTML5 client), which is a far better reference material than any book.
 
-## How can I develop with pomelo?
-With the following references, you can quickly familiarize yourself with the pomelo development process:
+## 我如何参加开发 pomelo?
+通过如下索引, 你可以快速的熟悉 pomelo 开发流程:
 * [Pomelo documents](https://github.com/NetEase/pomelo/wiki)
 * [Getting started](https://github.com/NetEase/pomelo/wiki/Welcome-to-Pomelo)
 * [Tutorial](https://github.com/NetEase/pomelo/wiki/Preface)
 
 
-## Contributors
+## 贡献者
 * NetEase, Inc. (@NetEase)
 * Peter Johnson(@missinglink)
 * Aaron Yoshitake 
