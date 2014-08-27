@@ -113,3 +113,6 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+# 译者注
+
+由于 github 上同一个项目只能 fork 一次，这是为什么笔者新开一个项目而不 fork 来的原因（笔者原来已经 fork 过一次了）。而且考虑到不一定能实时更新，以后新版本不停的出来要不停的注释也是一个负担，所以笔者这里只打算做好这一个版本的注释。
