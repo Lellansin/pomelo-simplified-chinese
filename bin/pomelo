@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Module dependencies.
+ * 模块依赖
  */
 var fs = require('fs'),
   os = require('os'),
@@ -20,7 +20,7 @@ var fs = require('fs'),
   program = require('commander');
 
 /**
- *  Constant Variables
+ *  常量
  */
 var TIME_INIT = 1 * 1000;
 var TIME_KILL_WAIT = 5 * 1000;
@@ -142,7 +142,7 @@ program.command('*')
 program.parse(process.argv);
 
 /**
- * Init application at the given directory `path`.
+ * 在给定目录(path) 初始化应用程序
  *
  * @param {String} path
  */
@@ -168,7 +168,7 @@ function init(path) {
 }
 
 /**
- * Create directory and files at the given directory `path`.
+ * 在给定的路径创建目录与文件
  *
  * @param {String} ph
  */
@@ -195,7 +195,7 @@ function createApplicationAt(ph, type) {
   setTimeout(function() {
     switch(type) {
       case '1':
-         // use websocket
+         // 使用 websocket
          var unlinkFiles = ['game-server/app.js.sio',
          'game-server/app.js.wss',
          'game-server/app.js.mqtt',
@@ -212,7 +212,7 @@ function createApplicationAt(ph, type) {
          }
         break;
         case '2':
-          // use socket.io
+          // 使用 socket.io
           var unlinkFiles = ['game-server/app.js',
           'game-server/app.js.wss',
           'game-server/app.js.udp',
@@ -233,7 +233,7 @@ function createApplicationAt(ph, type) {
           rmdir(path.resolve(ph, 'web-server/public/js/lib/local'));
           break;
         case '3':
-          // use websocket wss
+          // 使用 websocket wss
           var unlinkFiles = ['game-server/app.js.sio',
           'game-server/app.js',
           'game-server/app.js.udp',
@@ -254,7 +254,7 @@ function createApplicationAt(ph, type) {
           fs.renameSync(path.resolve(ph, 'web-server/public/js/lib/build/build.js.wss'), path.resolve(ph, 'web-server/public/js/lib/build/build.js'));
           break;
         case '4':
-          // use socket.io wss
+          // 使用 socket.io wss
            var unlinkFiles = ['game-server/app.js.sio',
           'game-server/app.js',
           'game-server/app.js.udp',
@@ -277,7 +277,7 @@ function createApplicationAt(ph, type) {
           fs.unlinkSync(path.resolve(ph, 'web-server/public/js/lib/component.json'));
           break;
         case '5':
-          // use socket.io wss
+          // 使用 socket.io wss
            var unlinkFiles = ['game-server/app.js.sio',
           'game-server/app.js',
           'game-server/app.js.wss',
@@ -296,7 +296,7 @@ function createApplicationAt(ph, type) {
           rmdir(path.resolve(ph, 'web-server/public/js/lib/local'));
           break;
         case '6':
-          // use socket.io
+          // 使用 socket.io
           var unlinkFiles = ['game-server/app.js',
           'game-server/app.js.wss',
           'game-server/app.js.udp',
@@ -332,7 +332,7 @@ function createApplicationAt(ph, type) {
 
 
 /**
- * Start application.
+ * 开启应用程序
  *
  * @param {Object} opts options for `start` operation
  */
@@ -370,7 +370,7 @@ function start(opts) {
 }
 
 /**
- * List pomelo processes.
+ * 显示 pomelo 进程列表
  *
  * @param {Object} opts options for `list` operation
  */
@@ -411,7 +411,7 @@ function list(opts) {
 }
 
 /**
- * Add server to application.
+ * 为一个应用添加服务器
  *
  * @param {Object} opts options for `add` operation
  */
@@ -431,14 +431,14 @@ function add(opts) {
 }
 
 /**
- * Terminal application.
+ * 终止应用
  *
- * @param {String} signal stop/kill
- * @param {Object} opts options for `stop/kill` operation
+ * @param {String} signal 信号 stop/kill
+ * @param {Object} opts 用于 `stop/kill` 的选项
  */
 function terminal(signal, opts) {
   console.info(CLOSEAPP_INFO);
-  // option force just for `kill`
+  // force(强制) 选项仅用于 `kill` 信号
   if(opts.force) {
     if (os.platform() === constants.PLATFORM.WIN) {
       exec(KILL_CMD_WIN);
@@ -525,7 +525,7 @@ function startMasterha(opts) {
 }
 
 /**
- * Check if the given directory `path` is empty.
+ * 判断给定目录(`path`)是否为空
  *
  * @param {String} path
  * @param {Function} fn
@@ -540,7 +540,7 @@ function emptyDirectory(path, fn) {
 }
 
 /**
- * Prompt confirmation with the given `msg`.
+ * 通过给定的提示信息(msg)来确认提示
  *
  * @param {String} msg
  * @param {Function} fn
@@ -552,7 +552,7 @@ function confirm(msg, fn) {
 }
 
 /**
- * Prompt input with the given `msg` and callback `fn`.
+ * 给定的提示信息(msg)后等待用户输入(输入的数据会传入fn回调函数中)
  *
  * @param {String} msg
  * @param {Function} fn
@@ -570,7 +570,7 @@ function prompt(msg, fn) {
 }
 
 /**
- * Exit with the given `str`.
+ * 输出指定字符串并结束当前进程
  *
  * @param {String} str
  */
@@ -580,7 +580,7 @@ function abort(str) {
 }
 
 /**
- * Copy template files to project.
+ * 复制模板文件到项目
  *
  * @param {String} origin
  * @param {String} target
@@ -611,7 +611,7 @@ function copy(origin, target) {
 }
 
 /**
- * Mkdir -p.
+ * Mkdir -p. (创建文件夹)
  *
  * @param {String} path
  * @param {Function} fn
@@ -629,7 +629,7 @@ function mkdir(path, fn) {
 }
 
 /**
- * Get user's choice on connector selecting
+ * 获取用户选择的连接器(connector)类型
  * 
  * @param {Function} cb
  */
@@ -656,7 +656,7 @@ function connectorType(cb) {
 }
 
 /**
- * Run server.
+ * 运行服务器
  * 
  * @param {Object} server server information
  */
