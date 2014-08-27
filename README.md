@@ -25,7 +25,7 @@ Pomelo 也适用于 实时的 web 应用; 它的分布式架构使其 拥有比�
 
 ### 快速, 可伸缩
 
-* 分布式 (多进程) 架构, 可以轻松的伸缩
+* 分布式 (多进程) 架构, 可以轻松的伸缩（详见[wiki](https://github.com/NetEase/pomelo/wiki/pomelo%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8A%A8%E6%9C%BA#%E5%88%86%E5%8C%BA%E7%AD%96%E7%95%A5%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1)）
 * 灵活的服务器扩展
 * 全性能优化与测试
 
@@ -55,11 +55,16 @@ Pomelo 有如下几点优势:
 * 框架可拓展. Based on the node.js micro module principle, the core of pomelo is small. All of the components, libraries and tools are individual npm modules, and anyone can create their own module to extend the framework.
 * 拥有完整的开发资料和文档. In addition to the documentation, we also provide [an open-source MMO RPG demo](https://github.com/NetEase/pomelo/wiki/Introduction-to--Lord-of-Pomelo) (HTML5 client), which is a far better reference material than any book.
 
-## 我如何参加开发 pomelo?
+## 我如何开始开发 pomelo?
 通过如下索引, 你可以快速的熟悉 pomelo 开发流程:
-* [Pomelo documents](https://github.com/NetEase/pomelo/wiki)
+* [Pomelo 文档](https://github.com/NetEase/pomelo/wiki)
 * [Getting started](https://github.com/NetEase/pomelo/wiki/Welcome-to-Pomelo)
-* [Tutorial](https://github.com/NetEase/pomelo/wiki/Preface)
+* [教程](https://github.com/NetEase/pomelo/wiki/Preface)
+
+## 官方实例
+
+* [多人聊天室](https://github.com/NetEase/chatofpomelo)
+* [多人在线RPG](https://github.com/NetEase/lordofpomelo)
 
 
 ## 贡献者
