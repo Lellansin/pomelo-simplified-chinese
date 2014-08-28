@@ -8,6 +8,7 @@ var Handler = function(app) {
 
 /**
  * New client entry.
+ * 新客户端入口 (调用见 web-server/public/index.html)
  *
  * @param  {Object}   msg     request message
  * @param  {Object}   session current session object
@@ -20,6 +21,7 @@ Handler.prototype.entry = function(msg, session, next) {
 
 /**
  * Publish route for mqtt connector.
+ * 发布路由 (用于 mqtt connector, 配置见 app.js.mqtt)
  *
  * @param  {Object}   msg     request message
  * @param  {Object}   session current session object
@@ -36,6 +38,7 @@ Handler.prototype.publish = function(msg, session, next) {
 
 /**
  * Subscribe route for mqtt connector.
+ * 订阅路由 (用于 mqtt connector, 配置见 app.js.mqtt)
  *
  * @param  {Object}   msg     request message
  * @param  {Object}   session current session object
