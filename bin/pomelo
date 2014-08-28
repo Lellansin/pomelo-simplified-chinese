@@ -174,10 +174,13 @@ function init(path) {
  */
 function createApplicationAt(ph, type) {
   var name = path.basename(path.resolve(CUR_DIR, ph));
+
+  // 复制 templates 目录下的模板文件到制定目录
   copy(path.join(__dirname, '../template/'), ph);
   mkdir(path.join(ph, 'game-server/logs'));
   mkdir(path.join(ph, 'shared'));
-  // rmdir -r
+
+  // rmdir -r 递归删除整个文件夹
   var rmdir = function(dir) {
     var list = fs.readdirSync(dir);
     for(var i = 0; i < list.length; i++) {
@@ -192,6 +195,8 @@ function createApplicationAt(ph, type) {
     }
     fs.rmdirSync(dir);
   };
+  
+  // 删除制定类型外不需要的文件，并重命名
   setTimeout(function() {
     switch(type) {
       case '1':
