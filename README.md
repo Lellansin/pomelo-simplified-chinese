@@ -31,7 +31,7 @@ Pomelo 也适用于 实时的 web 应用; 它的分布式架构使其 拥有比�
 
 ### 容易上手
 
-* 简单的 API: 请求(request), 响应(response), 广播(broadcast), 等等.
+* [简单的 API](http://pomelo.netease.com/api.html): 请求(request), 响应(response), 广播(broadcast), 等等.
 * 轻量级: 享受Node.js的效率高开发
 * 约定优于配置原则: 几乎零配置
 
@@ -58,6 +58,7 @@ Pomelo 有如下几点优势:
 ## 我如何开始开发 pomelo?
 通过如下索引, 你可以快速的熟悉 pomelo 开发流程:
 * [Pomelo 文档](https://github.com/NetEase/pomelo/wiki)
+* [Pomelo API 手册](http://pomelo.netease.com/api.html)
 * [Getting started](https://github.com/NetEase/pomelo/wiki/Welcome-to-Pomelo)
 * [教程](https://github.com/NetEase/pomelo/wiki/Preface)
 
