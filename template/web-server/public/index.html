@@ -26,9 +26,13 @@
           port: port,
           log: true
         }, function() {
-        pomelo.request("connector.entryHandler.entry", "hello pomelo", function(data) {
+        pomelo.request(
+          "connector.entryHandler.entry", // 调用服务端路由 (game-server/servers/connector/handler/entryHandler.js 中的 entry 方法)
+          "hello pomelo", // 传给服务端的 msg
+          function(data) { // 服务端返回
             alert(data.msg);
-          });
+          }
+        );
         });
       }
     </script>
